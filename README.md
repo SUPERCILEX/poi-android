@@ -35,6 +35,11 @@ If you're using proguard, also add:
 implementation "com.github.SUPERCILEX.poi-android:proguard:$poiVersion"
 ```
 
+If you want source code and documentation, add the real Apache POI dependency as `compileOnly`:
+```groovy
+compileOnly "org.apache.poi:poi-ooxml:$poiVersion"
+```
+
 ## Updating Apache POI
 
 If you need a newer version of Apache POI than is provided by this transpiler, updating is as simple
