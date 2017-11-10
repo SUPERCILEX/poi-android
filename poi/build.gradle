@@ -1,0 +1,69 @@
+apply plugin: "com.github.johnrengelman.shadow"
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+assemble.dependsOn shadowJar
+
+dependencies {
+    implementation 'org.apache.poi:poi-ooxml:3.17'
+    implementation 'org.apache.xmlbeans:xmlbeans:2.6.0'
+    implementation 'com.fasterxml:aalto-xml:1.0.0'
+}
+
+shadowJar {
+    exclude 'schemaorg_apache_xmlbeans/attribute/**'
+    exclude 'schemaorg_apache_xmlbeans/attributegroup/**'
+    exclude 'schemaorg_apache_xmlbeans/element/**'
+    exclude 'schemaorg_apache_xmlbeans/identityconstraint/**'
+    exclude 'schemaorg_apache_xmlbeans/javaname/**'
+    exclude 'schemaorg_apache_xmlbeans/modelgroup/**'
+    exclude 'schemaorg_apache_xmlbeans/namespace/**'
+    exclude 'schemaorg_apache_xmlbeans/src/**'
+    exclude 'schemaorg_apache_xmlbeans/system/s8*/**'
+    exclude 'schemaorg_apache_xmlbeans/system/sXML*/**'
+    exclude 'schemaorg_apache_xmlbeans/system/sF1327CCA741569E70F9CA8C9AF9B44B2/*.xsb'
+    exclude 'schemaorg_apache_xmlbeans/type/**'
+
+    exclude 'repackage/**'
+
+    exclude 'LICENSE.txt'
+    exclude 'NOTICE.txt'
+    exclude 'META-INF/LICENSE'
+    exclude 'META-INF/LICENSE.txt'
+    exclude 'META-INF/NOTICE'
+    exclude 'META-INF/NOTICE.txt'
+    exclude 'META-INF/maven/**'
+
+    // these are only needed when handling Visio files, remove it if you would like to use Visio support
+    dependencies {
+        exclude(dependency('com.github.virtuald:curvesapi'))
+        exclude(dependency('commons-codec:commons-codec'))
+    }
+
+    // Relocate javax dependencies so Android does not choke
+    relocate 'javax.xml.namespace', 'org.apache.poi.javax.xml.namespace'
+    relocate 'javax.xml.stream', 'org.apache.poi.javax.xml.stream'
+    relocate 'javax.xml.XMLConstants', 'org.apache.poi.javax.xml.XMLConstants'
+}
+
+artifacts {
+    compile shadowJar
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId "com.supercilex.poiandroid"
+            artifactId "shadow"
+            version "1.0.0"
+
+            artifact shadowJar
+
+            pom.withXml {
+                asNode().with {
+                    appendNode('name', "POI Android")
+                    appendNode('description', 'Apache POI for Android')
+                }
+            }
+        }
+    }
+}

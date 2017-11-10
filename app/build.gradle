@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion compileSdk
+
+    defaultConfig {
+        applicationId "com.supercilex.poiandroid.demo"
+        minSdkVersion minSdk
+        targetSdkVersion targetSdk
+        versionCode 1
+        versionName "1.0.0"
+
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            // For the purposes of the sample, allow testing of a proguarded release build
+            // using the debug key
+            signingConfig signingConfigs.debug
+
+            postprocessing {
+                removeUnusedCode true
+                removeUnusedResources true
+                obfuscate true
+                optimizeCode true
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation project(path: ':poi', configuration: 'compile')
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+
+    implementation 'com.android.support:multidex:1.0.2'
+    implementation "com.android.support:design:$supportLibVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0-beta3'
+
+    implementation "com.google.android.gms:play-services-tasks:11.6.0"
+
+    implementation 'pub.devrel:easypermissions:1.0.1'
+}
