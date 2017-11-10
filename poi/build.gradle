@@ -55,10 +55,11 @@ publishing {
             artifactId 'poi'
             version poiVersion
 
-            artifact shadowJar
+            artifact file("$buildDir/libs/poi-all.jar")
 
             pom.withXml {
                 asNode().with {
+                    appendNode('packaging', 'jar')
                     appendNode('name', "POI Android")
                     appendNode('description', 'Apache POI for Android')
                 }
