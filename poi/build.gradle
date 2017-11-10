@@ -52,7 +52,7 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             groupId 'com.supercilex.poiandroid'
-            artifactId 'shadow'
+            artifactId 'poi'
             version poiVersion
 
             artifact shadowJar
