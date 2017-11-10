@@ -20,7 +20,6 @@ shadowJar {
     exclude 'schemaorg_apache_xmlbeans/src/**'
     exclude 'schemaorg_apache_xmlbeans/system/s8*/**'
     exclude 'schemaorg_apache_xmlbeans/system/sXML*/**'
-    exclude 'schemaorg_apache_xmlbeans/system/sF1327CCA741569E70F9CA8C9AF9B44B2/*.xsb'
     exclude 'schemaorg_apache_xmlbeans/type/**'
 
     exclude 'repackage/**'
