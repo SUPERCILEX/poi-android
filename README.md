@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/SUPERCILEX/poi-android.svg?branch=master)](https://travis-ci.org/SUPERCILEX/poi-android)
-
 # POI Android
+
+[![Build Status](https://travis-ci.org/SUPERCILEX/poi-android.svg?branch=master)](https://travis-ci.org/SUPERCILEX/poi-android)
 
 POIA is a simple library enabling [Apache POI](https://poi.apache.org/) usage on Android.
 
@@ -46,8 +46,8 @@ If you need a newer version of Apache POI than is provided by this transpiler, u
 as making a fork and changing a few lines of code:
 
 1. Fork the repo and
-   [update Apache POI](https://github.com/SUPERCILEX/poi-android/blob/0fceaa215ef5d752118a6768f4d436edf29b9b72/build.gradle#L15)
-  1. PSA: you can find Apache POI release notes [here](https://poi.apache.org/changes.html)
+   [update Apache POI](https://github.com/SUPERCILEX/poi-android/blob/bddfb4dbb39b4db704af6e4764a4315bc79513f9/build.gradle#L15)
+    1. PSA: you can find Apache POI release notes [here](https://poi.apache.org/changes.html)
 1. Simply replace `SUPERCILEX` in the Gradle dependency with your own GitHub username
 1. That's it, it's that simple! 🚀
 
