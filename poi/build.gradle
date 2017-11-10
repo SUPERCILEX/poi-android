@@ -1,5 +1,5 @@
-apply plugin: "com.github.johnrengelman.shadow"
-apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'java' // Needed for shadow to work
 apply plugin: 'maven-publish'
 assemble.dependsOn shadowJar
 
@@ -52,9 +52,9 @@ artifacts {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId "com.supercilex.poiandroid"
-            artifactId "shadow"
-            version "1.0.0"
+            groupId 'com.supercilex.poiandroid'
+            artifactId 'shadow'
+            version '1.0.0'
 
             artifact shadowJar
 
