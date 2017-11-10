@@ -4,7 +4,7 @@ apply plugin: 'maven-publish'
 assemble.dependsOn shadowJar
 
 dependencies {
-    implementation 'org.apache.poi:poi-ooxml:3.17'
+    implementation "org.apache.poi:poi-ooxml:$poiVersion"
     implementation 'org.apache.xmlbeans:xmlbeans:2.6.0'
     implementation 'com.fasterxml:aalto-xml:1.0.0'
 }
@@ -53,7 +53,7 @@ publishing {
         mavenJava(MavenPublication) {
             groupId 'com.supercilex.poiandroid'
             artifactId 'shadow'
-            version '1.0.0'
+            version poiVersion
 
             artifact shadowJar
 

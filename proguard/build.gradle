@@ -8,7 +8,7 @@ android {
         minSdkVersion minSdk
         targetSdkVersion targetSdk
         versionCode 1
-        versionName "1.0.0"
+        versionName poiVersion
     }
 
     buildTypes {
@@ -30,7 +30,7 @@ publishing {
         mavenJava(MavenPublication) {
             groupId 'com.supercilex.poiandroid'
             artifactId 'proguard'
-            version '1.0.0'
+            version poiVersion
 
             artifact "$buildDir/outputs/aar/proguard-release.aar"
 

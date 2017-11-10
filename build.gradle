@@ -12,6 +12,7 @@ buildscript {
 
         kotlinVersion = '1.2.0-rc-39'
         supportLibVersion = '27.0.0'
+        poiVersion = '3.17'
     }
 
     dependencies {
