@@ -10,6 +10,8 @@ dependencies {
 }
 
 shadowJar {
+    archiveName 'poi-all.jar'
+
     exclude 'schemaorg_apache_xmlbeans/attribute/**'
     exclude 'schemaorg_apache_xmlbeans/attributegroup/**'
     exclude 'schemaorg_apache_xmlbeans/element/**'
