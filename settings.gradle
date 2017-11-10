@@ -1,1 +1,1 @@
-include ':app', ':poi'
+include ':app', ':poi', ':proguard'

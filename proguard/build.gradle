@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+android {
+    compileSdkVersion compileSdk
+
+    defaultConfig {
+        minSdkVersion minSdk
+        targetSdkVersion targetSdk
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            postprocessing {
+                consumerProguardFile 'proguard.pro'
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId 'com.supercilex.poiandroid'
+            artifactId 'proguard'
+            version '1.0.0'
+
+            artifact "$buildDir/outputs/aar/proguard-release.aar"
+
+            pom.withXml {
+                asNode().with {
+                    appendNode('name', "POI Android proguard")
+                    appendNode('description', 'Apache POI for Android')
+                }
+            }
+        }
+    }
+}
