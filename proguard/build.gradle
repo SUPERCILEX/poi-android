@@ -1,10 +1,5 @@
 apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
-tasks.whenTaskAdded { task ->
-    if (task.name.contains("publish") && task.name.contains("PublicationToMavenLocal")) {
-        task.dependsOn 'assemble'
-    }
-}
 
 android {
     compileSdkVersion compileSdk

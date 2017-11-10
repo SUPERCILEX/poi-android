@@ -29,4 +29,10 @@ allprojects {
         mavenLocal()
         maven { url 'http://dl.bintray.com/kotlin/kotlin-eap-1.2' }
     }
+
+    tasks.whenTaskAdded { task ->
+        if (task.name.contains("publish") && task.name.contains("PublicationToMavenLocal")) {
+            task.dependsOn 'assemble'
+        }
+    }
 }
