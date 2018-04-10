@@ -87,6 +87,7 @@
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.CTXf { *; }
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.SstDocument { *; }
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.StyleSheetDocument { *; }
+-keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.STBorderStyle$Enum { *; }
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.STCellType$Enum { *; }
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.STCellFormulaType$Enum { *; }
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.STXstring { *; }
