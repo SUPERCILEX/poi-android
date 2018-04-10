@@ -19,6 +19,5 @@ android:
     # https://github.com/travis-ci/travis-ci/issues/6040#issuecomment-219367943
     - tools
     - tools
-install: echo y | ${ANDROID_HOME}tools/bin/sdkmanager --channel=3 "build-tools;27.0.0"
 before_script: chmod +x gradlew
 script: ./gradlew build

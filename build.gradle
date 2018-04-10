@@ -2,7 +2,6 @@ buildscript {
     repositories {
         google()
         jcenter()
-        maven { url 'http://dl.bintray.com/kotlin/kotlin-eap-1.2' }
     }
 
     ext {
@@ -10,14 +9,14 @@ buildscript {
         targetSdk = 27
         minSdk = 16
 
-        kotlinVersion = '1.2.0-rc-39'
-        supportLibVersion = '27.0.0'
+        kotlinVersion = '1.2.31'
+        supportLibVersion = '27.1.1'
         poiVersion = '3.17'
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0'
-        classpath "com.github.jengelman.gradle.plugins:shadow:2.0.1"
+        classpath 'com.android.tools.build:gradle:3.1.0'
+        classpath "com.github.jengelman.gradle.plugins:shadow:2.0.3"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     }
 }
@@ -27,7 +26,6 @@ allprojects {
         google()
         jcenter()
         mavenLocal()
-        maven { url 'http://dl.bintray.com/kotlin/kotlin-eap-1.2' }
     }
 
     tasks.whenTaskAdded { task ->
