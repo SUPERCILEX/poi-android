@@ -48,6 +48,7 @@
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.CTCellAlignment { *; }
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.CTCellFormula { *; }
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.CTCellStyleXfs { *; }
+-keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.CTCellProtection { *; }
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.CTCellXfs { *; }
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.CTColor { *; }
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.CTCol { *; }
@@ -100,6 +101,7 @@
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.impl.CTCellAlignmentImpl { *; }
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.impl.CTCellFormulaImpl { *; }
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.impl.CTCellStyleXfsImpl { *; }
+-keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.impl.CTCellProtectionImpl { *; }
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.impl.CTCellXfsImpl { *; }
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.impl.CTColorImpl { *; }
 -keep class org.openxmlformats.schemas.spreadsheetml.x2006.main.impl.CTColImpl { *; }
