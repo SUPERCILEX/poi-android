@@ -5,8 +5,8 @@ assemble.dependsOn shadowJar
 
 dependencies {
     implementation "org.apache.poi:poi-ooxml:$poiVersion"
-    implementation 'org.apache.xmlbeans:xmlbeans:2.6.0'
-    implementation 'com.fasterxml:aalto-xml:1.0.0'
+    implementation 'org.apache.xmlbeans:xmlbeans:3.1.0'
+    implementation 'com.fasterxml:aalto-xml:1.2.2'
 }
 
 shadowJar {
@@ -35,10 +35,10 @@ shadowJar {
     exclude 'META-INF/maven/**'
 
     // these are only needed when handling Visio files, remove it if you would like to use Visio support
-    dependencies {
-        exclude(dependency('com.github.virtuald:curvesapi'))
-        exclude(dependency('commons-codec:commons-codec'))
-    }
+//    dependencies {
+//        exclude(dependency('com.github.virtuald:curvesapi'))
+//        exclude(dependency('commons-codec:commons-codec'))
+//    }
 
     // Relocate javax dependencies so Android does not choke
     relocate 'javax.xml.namespace', 'org.apache.poi.javax.xml.namespace'
