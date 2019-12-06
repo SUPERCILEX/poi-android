@@ -9,7 +9,7 @@ buildscript {
         targetSdk = 27
         minSdk = 16
 
-        kotlinVersion = '1.2.31'
+        kotlinVersion = '1.6.61'
         supportLibVersion = '27.1.1'
         poiVersion = '4.1.1'
     }
