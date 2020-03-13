@@ -18,7 +18,7 @@ dependencies {
 
             // 3.7 - 3.13
             case ~/^(3\.7.*|3\.([7-9]|1[0-3]).*)/:
-                ext.ooxml_extendedVersion = "1.0"
+                ext.ooxml_extendedVersion = "1.1"
                 break
 
             // 3.13 - 3.17
